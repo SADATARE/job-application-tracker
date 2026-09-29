@@ -1,0 +1,28 @@
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none
+}
+
+.status-applied {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: var(--color-applied);
+}
+
+.status-interview {
+  background-color: rgba(217, 119, 6, 0.15);
+  color: var(--color-interview);
+}
+
+.status-offer {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: var(--color-offer);
+}
+
+.status-rejected {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--color-rejected);
+}

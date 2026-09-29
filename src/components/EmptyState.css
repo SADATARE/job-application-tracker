@@ -1,0 +1,116 @@
+.empty-state {
+    text-align: center;
+    padding: 56px 16px 40px;
+    border-top: 1px solid var(--color-border);
+}
+
+.empty-state .add-button {
+    display: inline-flex;
+}
+
+.empty-illustration{
+    position: relative;
+    width: 220px;
+    height: 170px;
+    margin: 0 auto 20px;
+}
+
+.empty-card-back {
+    position: absolute;
+    top: 26px;
+    left: 64px;
+    width: 150px;
+    height: 104px;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transform: rotate(5deg);
+}
+
+.empty-card-front {
+    position: absolute;
+    top: 42px;
+    left: 34px;
+    width: 150px;
+    height: 104px;
+    padding: 26px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 14px;
+    background-color: var(--color-surface);
+    border: 1px solid #2b3650;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    transform: rotate(-3deg);
+}
+
+.empty-bar{
+    display: block;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #2f4fa8;
+}
+
+.empty-bar-gray{
+    width: 65%;
+    background-color: #3b4557;
+}
+
+.empty-badge{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.empty-badge-plus {
+    top: 0;
+    left: 14px;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background-color: var(--color-accent);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+    transform: rotate(-8deg);
+}
+
+.empty-badge-spark {
+  top: 96px;
+  left: 170px;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: #f7a84f;
+  box-shadow: 0 8px 20px rgba(247, 168, 79, 0.35);
+  transform: rotate(8deg);
+}
+
+.empty-text {
+    max-width: 480px;
+    margin: 0 auto 28px;
+    color: var(--color-text-muted);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.empty-hint {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.load-sample-button {
+  display: block;
+  margin: 20px auto 0;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.load-sample-button:hover {
+  color: var(--color-text);
+}
