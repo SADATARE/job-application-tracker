@@ -1,75 +1,53 @@
-# React + TypeScript + Vite
+# Trackr
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A job application tracker built with React, TypeScript, and vanilla CSS — designed to keep track of every application, interview, and offer in one clear, organized place.
 
-Currently, two official plugins are available:
+**Live site:** https://job-application-tracker-chi-sand.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Trackr screenshot](./screenshot.png)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Add, edit, and delete job applications
+- Track status through four stages: Applied, Interview, Offer, Rejected — editable directly from the table
+- Search by company or role, and filter by status
+- Auto-calculated follow-up reminders and response-due countdowns, based on how long an application has sat without an update
+- Data persists locally via `localStorage` — no backend required
+- Fully responsive: a data table on desktop, an icon-only sidebar on tablet, and a card-based layout with a slide-out menu on phone
+- A designed empty state for first-time visitors, with a one-click "load sample data" option to explore the app
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React + TypeScript
+- Vite
+- Vanilla CSS (CSS custom properties for theming)
+- [lucide-react](https://lucide.dev/) for icons
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Running it locally
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/SADATARE/job-application-tracker.git
+cd job-application-tracker
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Then open `http://localhost:5173` in your browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+## Project structure
 ```
+src/
+├── components/   # UI components, each with its own CSS file
+├── types/        # Shared TypeScript types
+├── utils/        # Helper functions (date formatting, follow-up logic, storage, etc.)
+├── App.tsx       # Main application state and layout
+```
+
+## Possible future additions
+
+- A drag-and-drop kanban board view, grouped by status
+- A light/dark theme toggle
+
+## Author
+
+Built by Sada Tare as a personal project.
