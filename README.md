@@ -4,7 +4,7 @@ A job application tracker built with React, TypeScript, and vanilla CSS — desi
 
 **Live site:** https://job-application-tracker-chi-sand.vercel.app
 
-![Trackr screenshot](./screenshot.png)
+![Trackr screenshot](./screenshot.png.png)
 
 ## Features
 
